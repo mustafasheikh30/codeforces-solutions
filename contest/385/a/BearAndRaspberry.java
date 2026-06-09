@@ -14,12 +14,17 @@ public class BearAndRaspberry {
         sc.close();
         int max = 0;
         for (int i = 0; i < prices.length - 1; i++) {
-            int curr = prices[i] - (prices[i + 1] + c);
+            int curr = prices[i] - (prices[j] + c);
 
             if (curr > max) {
                 max = curr;
             }
         }
-        System.out.println(max);
+        if (max <= 0) {
+            System.out.println(0);
+
+        } else {
+            System.out.println(max);
+        }
     }
 }
